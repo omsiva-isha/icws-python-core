@@ -34,3 +34,26 @@ print("information of list",get_info(lst))
 
 for num in range(5,60,5):
     print(num)
+
+
+def fact(num):
+    fact=1
+    for i in range(1,num+1):
+        fact=fact*(i)
+    return fact
+
+def fact_recursive(num):
+    print("insinsid fact to calculate",num)
+    if num==1:
+        return 1
+    
+
+    fact=num*fact_recursive(num-1)
+    print(num,"! fact ",fact)
+    return fact
+
+num=5
+print("factorial is ====",fact(num))
+print("factorial is ====",fact_recursive(num))
+        
+
