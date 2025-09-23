@@ -3,9 +3,11 @@ class Stack:
     def __init__(self):
         self.items = [ ]
         print("calling intially")
+        
     def push(self, item):
         a=0
         self.items.append(item)
+
     def pop(self):
         if self.is_empty():
             raise IndexError("Pop from empty stack")

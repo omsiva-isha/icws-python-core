@@ -12,7 +12,13 @@ def get_info(lst):
     info={}
     sum=0
     for i in lst:
+        if i%2== 0 :
+            continue 
+        if sum>100:
+            break       
         sum=sum+i
+
+
     info["sum"]=sum
     info["count"]= len(lst)
     info["avg"] = sum/info["count"]
@@ -52,8 +58,31 @@ def fact_recursive(num):
     print(num,"! fact ",fact)
     return fact
 
-num=5
+def fibinoci(n):
+    a,b,c=0,1,""
+    for i in range(n):
+        c=c+str(a)+","
+        a,b=b,a+b
+    return c
+
+def fibnoci_lst(n):
+    if(n<=0):
+        return []
+    elif(n==1):
+        return [0]
+    elif(n==2):
+        return [0,1]
+    else:
+        ls=fibnoci_lst(n-1)
+        ls.append(ls[-1]+ls[-2])
+        return ls
+
+
+
+num=10
 print("factorial is ====",fact(num))
 print("factorial is ====",fact_recursive(num))
+print("fibnoci series\n",fibinoci(num))
+print("fibnoci series using recursion and list",fibnoci_lst(num))
         
 
