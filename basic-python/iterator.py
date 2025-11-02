@@ -1,5 +1,6 @@
 def str_rev(str):
     str2=""
+    print(str[::-1])
     for i in range(len(str)-1,-1,-1):
         print(str[i])
         str2=str2+str[i]

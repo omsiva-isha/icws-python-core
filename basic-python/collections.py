@@ -65,6 +65,38 @@ def fibinoci(n):
         a,b=b,a+b
     return c
 
+def fibinoci(n):
+    a,b=0,1
+    print(a,",",b,end=",")
+    for i in range(n-2):
+        c=a+b
+        print(c,end=",")
+        a,b=b,c
+        
+       
+    return c
+
+def fibinoci_kum(n):
+    a,b=0,1
+    for i in range(n):
+        print(a,end=",")
+        a,b=b,a+b
+
+        
+def fib_lst(n):
+    fib=[0,1]
+    if n<=0:
+        return []
+    if n==1:
+        return[0]
+    if n==2:
+        return[0,1]
+   
+   
+    for i in range(n-2):
+        fib.append(fib[-1]+fib[-2])
+    return fib
+
 def fibnoci_lst(n):
     if(n<=0):
         return []
@@ -79,10 +111,12 @@ def fibnoci_lst(n):
 
 
 
-num=10
+num=5
 print("factorial is ====",fact(num))
 print("factorial is ====",fact_recursive(num))
 print("fibnoci series\n",fibinoci(num))
 print("fibnoci series using recursion and list",fibnoci_lst(num))
+print("fib kum",fibinoci_kum(num))
+print("fib lst",fib_lst(num))
         
 
