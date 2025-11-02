@@ -54,3 +54,20 @@ for v in my_dict.values():
     
 for key, value in my_dict.items():
     print(f"{key}: {value}")
+
+
+n=20
+for i in range(2,n+1):
+    count =0
+    for j in range(2,i):
+        if(i%j==0):
+            count=1
+            break
+    if count==0:
+        print(f"{i} is prime number")
+
+for i in range(n+1):
+    if(i%2==0):
+        continue
+    print(f"{i} is odd number")
+    
